@@ -6,7 +6,9 @@ import { CartButton } from "../CartButton";
 export const Header = () => {
   return (
     <C.HeaderContainer>
-      <img src={logo} alt="" />
+      <C.LogoButton to="/">
+        <img src={logo} alt="" />
+      </C.LogoButton>
       <nav>
         <C.Localization>
           <img src={MapsPin} alt="" />

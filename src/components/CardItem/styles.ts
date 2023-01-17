@@ -60,13 +60,18 @@ export const Buy = styled.footer`
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  gap: 29px;
+  gap: 1rem;
 
   position: absolute;
   height: 38px;
   left: 24px;
   right: 24px;
   bottom: 20px;
+
+  > div {
+    display: flex;
+    gap: 0.5rem;
+  }
 `;
 
 export const Price = styled.span`
@@ -76,19 +81,26 @@ export const Price = styled.span`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.2rem;
   line-height: 130%;
-  /* or 18px */
 
   text-align: right;
 
-  /* Base/Text */
+  color: ${(props) => props.theme.colors["base-text"]};
+`;
 
-  color: #574f4d;
+export const CartButton = styled.button`
+  background: ${(props) => props.theme.colors["purple-dark"]};
+  color: ${(props) => props.theme.colors.white};
+  border-radius: 6px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
 
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  &:hover {
+    background: ${(props) => props.theme.colors.purple};
+  }
 `;

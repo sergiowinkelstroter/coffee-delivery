@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
@@ -27,3 +28,5 @@ export const Localization = styled.div`
   background-color: ${(props) => props.theme.colors["purple-light"]};
   border-radius: 6px;
 `;
+
+export const LogoButton = styled(Link)``;

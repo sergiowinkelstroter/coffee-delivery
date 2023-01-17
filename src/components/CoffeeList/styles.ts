@@ -4,7 +4,7 @@ export const CoffeeListContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-top: 5rem;
+  margin-block: 5rem;
 `;
 
 export const Title = styled.h1`
@@ -12,7 +12,7 @@ export const Title = styled.h1`
   font-size: 2rem;
   line-height: 130%;
 
-  color: ${(props) => props.theme.colors["base-title"]};
+  color: ${(props) => props.theme.colors["base-subtitle"]};
 `;
 
 export const CoffeeList = styled.div`

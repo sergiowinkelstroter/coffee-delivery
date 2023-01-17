@@ -1,7 +1,10 @@
+import { ShoppingCart } from "phosphor-react";
 import { priceFormatted } from "../../utils";
+import { AmountButtons } from "../AmountButtons";
 import * as C from "./styles";
 
-interface Coffee {
+export interface Coffee {
+  id: string;
   title: string;
   category: string[];
   description: string;
@@ -21,6 +24,12 @@ export const CardItem = ({ coffee }: CardItemProps) => {
       <C.Description>{coffee.description}</C.Description>
       <C.Buy>
         <C.Price>{priceFormatted(coffee.price)}</C.Price>
+        <div>
+          <AmountButtons product={coffee} />
+          <C.CartButton>
+            <ShoppingCart />
+          </C.CartButton>
+        </div>
       </C.Buy>
     </C.Card>
   );
