@@ -31,7 +31,6 @@ export const PaymentContainer = styled.div`
   background: ${(props) => props.theme.colors["base-card"]};
   border-radius: 6px;
   padding: 2.5rem;
-  margin-top: 0.75rem;
   width: 35rem;
 `;
 
@@ -97,9 +96,38 @@ export const CoffeeSelections = styled.div`
   }
 `;
 
-export const Totals = styled.div``;
+export const Totals = styled.div`
+  border-radius: 0 0 6px 44px;
+  background: ${(props) => props.theme.colors["base-card"]};
+  padding: 0 2.5rem 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  label {
+    color: ${(props) => props.theme.colors["base-text"]};
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-size: 1rem;
+    }
+    &:last-of-type {
+      color: ${(props) => props.theme.colors["base-subtitle"]};
+      font-size: 1.25rem;
+      font-weight: bold;
+      span {
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+      }
+    }
+  }
+`;
 
 export const ConfirmOrder = styled.button`
+  width: 100%;
   margin-top: 1.5rem;
   height: 46px;
   background: ${(props) => props.theme.colors.yellow};
@@ -113,5 +141,23 @@ export const ConfirmOrder = styled.button`
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+  }
+`;
+
+export const CoffeeList = styled.div`
+  margin-top: 0.9375rem;
+  background: ${(props) => props.theme.colors["base-card"]};
+  padding: 2.5rem;
+  border-radius: 6px 44px 0 0;
+  @media (min-width: 1024px) {
+    padding: 2.5rem 1rem;
+  }
+`;
+
+export const CartItemContainer = styled.div`
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid ${(props) => props.theme.colors["base-button"]};
+  & + & {
+    padding-top: 1.5rem;
   }
 `;

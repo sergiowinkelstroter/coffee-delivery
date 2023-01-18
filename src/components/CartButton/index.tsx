@@ -1,8 +1,9 @@
 import { ShoppingCart } from "phosphor-react";
 import * as C from "./styles";
+import { useCart } from "../../hooks/useCart";
 
 export const CartButton = () => {
-  const totalItems: number = 1;
+  const { totalItems } = useCart();
 
   return (
     <C.CartButtonContainer to="/checkout">

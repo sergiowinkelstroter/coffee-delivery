@@ -5,6 +5,12 @@ export const CoffeeListContainer = styled.div`
   flex-direction: column;
 
   margin-block: 5rem;
+
+  @media (max-width: 768px) {
+    div {
+      grid-template-columns: 1fr;
+    }
+  }
 `;
 
 export const Title = styled.h1`
